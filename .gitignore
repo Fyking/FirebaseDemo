@@ -17,3 +17,9 @@ local.properties
 app/src/main/res/layout/
 app/src/res/layout/
 uniplugin_fcm/libs/
+.idea/.gitignore
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+.idea/vcs.xml
