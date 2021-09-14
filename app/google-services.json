@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "260597057538",
+    "project_id": "fcmdemo-52fd7",
+    "storage_bucket": "fcmdemo-52fd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260597057538:android:b4785704e098c3fd0bff1b",
+        "android_client_info": {
+          "package_name": "hk.com.peoplesplace.fcmdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260597057538-l3rfuc9b44i4mc725522gu5hflq3ia8g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPple2SkT2GVKhHPvqdE7IDuZcA8aa4LA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260597057538-l3rfuc9b44i4mc725522gu5hflq3ia8g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

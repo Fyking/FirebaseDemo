@@ -1,0 +1,14 @@
+{
+  "nativePlugins": [
+    {
+      "hooksClass": "Fcm_AppProxy",
+      "plugins": [
+        {
+          "type": "module",
+          "name": "FcmModule",
+          "class": "io.dcloud.uniplugin.FcmModule"
+        }
+      ]
+    }
+  ]
+}
