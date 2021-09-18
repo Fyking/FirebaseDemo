@@ -12,7 +12,6 @@ import com.google.firebase.messaging.RemoteMessage;
  * explain${Fcm接收通知}
  */
 public class FcmMessageService extends FirebaseMessagingService {
-    public static Context mContext;
     public static String TAG = "tag_-----FcmMessagService:";
     final int NOTIFY_ID = 2233;
 
@@ -37,7 +36,7 @@ public class FcmMessageService extends FirebaseMessagingService {
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-            FirePush.sendNotification(mContext,remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody());
+            FirePush.sendNotification(getApplicationContext(),remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody());
         }
 
         // Also if you intend on generating your own notifications as a result of a received FCM
