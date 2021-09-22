@@ -68,7 +68,7 @@ public class FirePush {
         return "";
     }
 
-    public static void sendNotification(Context iContext,String messageTitle, String messageBody) {
+    public static void sendNotification(Context iContext,String messageTitle, String messageBody,int NotifyId) {
         // 接收到通知后，点击通知，启动 MessageActivity
         try {
             Intent intent = new Intent();
@@ -108,7 +108,7 @@ public class FirePush {
             }
 //                builder.setContentIntent(pendingIntent);
 //                builder.setFullScreenIntent(pendingIntent, true);//将一个Notification变成悬挂式Notification
-            manager.notify(NOTIFY_ID,notification);
+            manager.notify(NotifyId,notification);
         }catch (Exception ex){
             Log.e(TAG, "sendNotification failed", ex);
         }

@@ -20,13 +20,13 @@ public class FcmMessageService extends FirebaseMessagingService {
         // TODO(developer): Handle FCM messages here.
         // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
         Log.e(TAG, "From Id為: " + remoteMessage.getFrom());
+        int NotifyId = NOTIFY_ID;
 
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             Log.d(TAG, "Message data payload: " + remoteMessage.getData());
-            if (true) {
-                // For long-running tasks (10 seconds or more) use WorkManager.
-                Log.d(TAG, "Message Send Title:"+remoteMessage.getNotification().getTitle());
+            if (remoteMessage.getData().containsKey("code")) {
+                NotifyId = Integer.parseInt(remoteMessage.getData().get("code"));
             } else {
                 // Handle message within 10 seconds
                 handleNow();
@@ -36,7 +36,7 @@ public class FcmMessageService extends FirebaseMessagingService {
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-            FirePush.sendNotification(getApplicationContext(),remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody());
+            FirePush.sendNotification(getApplicationContext(),remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody(),NotifyId);
         }
 
         // Also if you intend on generating your own notifications as a result of a received FCM

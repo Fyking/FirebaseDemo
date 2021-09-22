@@ -68,7 +68,7 @@ public class FcmModule extends UniModule {
     @UniJSMethod(uiThread = true)
     public void testPush(){
         //获取推送Token
-        FirePush.sendNotification(mUniSDKInstance.getContext(),"你好","测试信息");
+        FirePush.sendNotification(mUniSDKInstance.getContext(),"你好","测试信息",REQUEST_CODE);
     }
 
     //run ui thread
